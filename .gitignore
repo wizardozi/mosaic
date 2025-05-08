@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# VSCode settings
+.vscode/
+
+# React Editor-specific files
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+*.log

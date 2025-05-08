@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import DayColumn from "./components/DayColumn";
 
 function App() {
+  const mondayTasks = ["Meeting at 10AM", "Send emails", "Review PRs"];
+  const tuesdayTasks = ["Write documentation", "Client call", "Bug fixes"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Mosaic Planner</h1>
+      <DayColumn day="Monday" tasks={mondayTasks} />
+      <DayColumn day="Tuesday" tasks={tuesdayTasks} />
     </div>
   );
 }
