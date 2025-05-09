@@ -1,21 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import { Task } from "../models/Task";
 
 function Task({ task }) {
-  const [isComplete, setIsComplete] = useState(false);
-  const handleClick = () => {
-    setIsComplete(!isComplete);
-  };
   return (
     <div>
-      <li
-        onClick={handleClick}
-        style={{
-          textDecoration: isComplete ? "line-through" : "none",
-          cursor: "pointer",
-        }}
-      >
-        {task}
-      </li>
+      <li>{task.title}</li>
     </div>
   );
 }

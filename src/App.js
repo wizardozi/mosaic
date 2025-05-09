@@ -1,15 +1,11 @@
-import React from "react";
-import DayColumn from "./components/DayColumn";
+import React, { useState } from "react";
+import TasksCard from "./components/TasksCard";
+import Task from "./components/Task";
 
 function App() {
-  const mondayTasks = ["Meeting at 10AM", "Send emails", "Review PRs"];
-  const tuesdayTasks = ["Write documentation", "Client call", "Bug fixes"];
-
   return (
     <div>
-      <h1>Mosaic Planner</h1>
-      <DayColumn day="Monday" tasks={mondayTasks} />
-      <DayColumn day="Tuesday" tasks={tuesdayTasks} />
+      <TasksCard />
     </div>
   );
 }
